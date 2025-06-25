@@ -56,8 +56,8 @@ export default function PlanPreview() {
   };
 
   return (
-    <div className="space-y-4 p-6">
-      <h2 className="text-xl font-semibold mb-4">Task List</h2>
+    <div className="space-y-4 p-6 bg-neutral-900 font-roboto text-neutral-100">
+      <h2 className="text-xl font-semibold mb-4 text-white">Task List</h2>
       <div className="space-y-2">
         {data.tasks.map((task) => (
           <div key={task.id} className="flex items-center gap-2">
@@ -66,12 +66,12 @@ export default function PlanPreview() {
               id={task.id}
               onCheckedChange={(checked) => handleCheckbox(task.id, !!checked)}
             />
-            <label htmlFor={task.id} className="text-sm">{task.label}</label>
+            <label htmlFor={task.id} className="text-sm text-neutral-100 font-roboto">{task.label}</label>
           </div>
         ))}
       </div>
       <button
-        className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+        className="px-4 py-2 bg-[#FAC42B] text-neutral-900 rounded font-semibold disabled:opacity-50 font-roboto border border-neutral-700"
         onClick={handleRun}
         disabled={selected.length === 0 || loading}
       >
