@@ -10,7 +10,6 @@ interface NavItemProps {
 
 function NavItem({ label, href, disabled = false, icon }: NavItemProps) {
   const baseClasses = "flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors";
-  const activeClasses = "bg-gray-100 text-gray-900";
   const inactiveClasses = "text-gray-600 hover:text-gray-900 hover:bg-gray-50";
   const disabledClasses = "text-gray-400 cursor-not-allowed";
 
@@ -63,8 +62,7 @@ export default function Sidebar() {
         />
         <NavItem 
           label="Audit" 
-          href="/audit" 
-          disabled 
+          href="/audit"
           icon={<Shield className="w-4 h-4" />}
         />
       </nav>

@@ -1,7 +1,11 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Plan } from "@/../types/plan";
+
+// If you have Sonner, import it. Otherwise, fallback to alert.
+// import { toast } from "sonner";
 
 async function fetchPlan() {
   const res = await fetch("/api/runPlan", { method: "POST" });
@@ -14,18 +18,65 @@ export default function PlanPreview() {
     queryKey: ["plan"],
     queryFn: fetchPlan,
   });
+  const [selected, setSelected] = useState<string[]>([]);
+  const [loading, setLoading] = useState(false);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading plan.</div>;
   if (!data) return null;
 
+  const handleCheckbox = (taskId: string, checked: boolean) => {
+    setSelected((prev) =>
+      checked ? [...prev, taskId] : prev.filter((id) => id !== taskId)
+    );
+  };
+
+  const handleRun = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/execute", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ taskIds: selected }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        // toast.success("Tasks executed!");
+        alert("Tasks executed!");
+      } else {
+        // toast.error("Failed to execute tasks.");
+        alert("Failed to execute tasks.");
+      }
+    } catch (e) {
+      // toast.error("Failed to execute tasks.");
+      alert("Failed to execute tasks.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="space-y-2">
-      {data.tasks.map((task) => (
-        <Checkbox key={task.id} defaultChecked={task.suggested}>
-          {task.label}
-        </Checkbox>
-      ))}
+    <div className="space-y-4 p-6">
+      <h2 className="text-xl font-semibold mb-4">Task List</h2>
+      <div className="space-y-2">
+        {data.tasks.map((task) => (
+          <div key={task.id} className="flex items-center gap-2">
+            <Checkbox
+              defaultChecked={task.suggested}
+              id={task.id}
+              onCheckedChange={(checked) => handleCheckbox(task.id, !!checked)}
+            />
+            <label htmlFor={task.id} className="text-sm">{task.label}</label>
+          </div>
+        ))}
+      </div>
+      <button
+        className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+        onClick={handleRun}
+        disabled={selected.length === 0 || loading}
+      >
+        {loading ? "Running..." : "Run selected tasks"}
+      </button>
     </div>
   );
 } 
