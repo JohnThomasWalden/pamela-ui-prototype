@@ -47,7 +47,7 @@ export default function PlanPreview() {
         // toast.error("Failed to execute tasks.");
         alert("Failed to execute tasks.");
       }
-    } catch (e) {
+    } catch {
       // toast.error("Failed to execute tasks.");
       alert("Failed to execute tasks.");
     } finally {
