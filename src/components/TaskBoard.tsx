@@ -25,14 +25,14 @@ export function TaskBoard() {
   }, {} as Record<string, typeof tasks>);
 
   return (
-    <div className="h-full overflow-auto bg-neutral-900">
+    <div className="h-full overflow-auto bg-pam-canvas">
       <div className="p-6">
-        <h1 className="text-2xl font-bold mb-6 text-neutral-100">Task Board</h1>
+        <h1 className="text-2xl font-bold mb-6 text-pam-text">Task Board</h1>
         
         <div className="space-y-6">
           {Object.entries(groupedTasks).map(([section, sectionTasks]) => (
             <div key={section}>
-              <h2 className="text-lg font-semibold mb-3 text-neutral-300">{section}</h2>
+              <h2 className="text-lg font-semibold mb-3 text-pam-subtle">{section}</h2>
               <div className="grid gap-4">
                 {sectionTasks.map((task) => (
                   <TaskCard key={task.id} task={task} />
@@ -43,7 +43,7 @@ export function TaskBoard() {
         </div>
         
         {tasks.length === 0 && (
-          <div className="text-center py-12 text-neutral-400">
+          <div className="text-center py-12 text-pam-subtle">
             <div className="text-lg mb-2">No tasks loaded</div>
             <div className="text-sm">Tasks will appear here once loaded</div>
           </div>

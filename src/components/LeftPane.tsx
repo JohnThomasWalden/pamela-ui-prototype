@@ -7,9 +7,9 @@ import { ChatDock } from './ChatDock';
 
 export function LeftPane() {
   return (
-    <div className="flex flex-col h-full w-full min-w-0 bg-neutral-900">
+    <div className="flex flex-col h-full w-full min-w-0 bg-pam-canvas">
       {/* PlanQueue - Top section */}
-      <div className="flex-shrink-0 border-b border-neutral-700">
+      <div className="flex-shrink-0 border-b border-pam-subtle/20">
         <PlanQueue />
       </div>
       
@@ -19,7 +19,7 @@ export function LeftPane() {
       </div>
       
       {/* ChatDock - Bottom section */}
-      <div className="flex-shrink-0 border-t border-neutral-700">
+      <div className="flex-shrink-0 border-t border-pam-subtle/20">
         <ChatDock />
       </div>
     </div>

@@ -11,8 +11,8 @@ interface NavItemProps {
 
 function NavItem({ label, href, disabled = false, icon }: NavItemProps) {
   const baseClasses = "flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors font-roboto";
-  const inactiveClasses = "text-neutral-300 hover:text-white hover:bg-neutral-700";
-  const disabledClasses = "text-neutral-600 cursor-not-allowed";
+  const inactiveClasses = "text-pam-subtle hover:text-pam-text hover:bg-pam-surface";
+  const disabledClasses = "text-pam-subtle/40 cursor-not-allowed";
 
   const classes = disabled 
     ? `${baseClasses} ${disabledClasses}`
@@ -42,7 +42,7 @@ function NavItem({ label, href, disabled = false, icon }: NavItemProps) {
 
 function BrandLogo() {
   return (
-    <div className="flex items-center gap-2 px-3 py-4 border-b border-neutral-700 bg-neutral-800">
+    <div className="flex items-center gap-2 px-3 py-4 border-b border-pam-subtle/20 bg-pam-surface">
       <Image
         src="/logo.png"
         alt="Pamela Logo"
@@ -51,14 +51,14 @@ function BrandLogo() {
         className="rounded-lg"
         priority
       />
-      <span className="font-semibold text-lg font-roboto text-white">Pamela</span>
+      <span className="font-semibold text-lg font-roboto text-pam-text">Pamela</span>
     </div>
   );
 }
 
 export default function Sidebar() {
   return (
-    <div className="flex flex-col h-full border-r border-neutral-700 bg-neutral-800 text-neutral-100 font-roboto">
+    <div className="flex flex-col h-full border-r border-pam-subtle/20 bg-pam-surface text-pam-text font-roboto">
       <BrandLogo />
       <nav className="flex-1 p-3 space-y-1">
         <NavItem 

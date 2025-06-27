@@ -48,8 +48,8 @@ export default function ChatPanel() {
   };
 
   return (
-    <div className="h-full p-6 flex flex-col bg-neutral-900 font-roboto">
-      <h2 className="text-xl font-semibold mb-4 text-white">AI Chat</h2>
+    <div className="h-full p-6 flex flex-col bg-pam-canvas font-roboto">
+      <h2 className="text-xl font-semibold mb-4 text-pam-text">AI Chat</h2>
       <div className="flex-1 overflow-y-auto space-y-2 mb-4">
         {messages.map((msg) => (
           <div
@@ -59,8 +59,8 @@ export default function ChatPanel() {
             <div
               className={`px-4 py-2 rounded-lg max-w-xs break-words shadow text-sm font-roboto
                 ${msg.sender === "user"
-                  ? "bg-[#FAC42B] text-neutral-900"
-                  : "bg-neutral-800 text-neutral-100"}`}
+                  ? "bg-pam-accent1 text-pam-text"
+                  : "bg-pam-surface text-pam-text"}`}
             >
               {msg.text}
             </div>
@@ -70,7 +70,7 @@ export default function ChatPanel() {
       </div>
       <div className="flex gap-2">
         <input
-          className="flex-1 border border-neutral-700 rounded px-3 py-2 text-sm focus:outline-none focus:ring focus:border-[#FAC42B] bg-neutral-900 text-neutral-100 font-roboto"
+          className="flex-1 border border-pam-subtle/30 rounded px-3 py-2 text-sm focus:outline-none focus:ring focus:border-pam-accent1 bg-pam-surface text-pam-text font-roboto"
           type="text"
           placeholder="Type your message..."
           value={input}
@@ -79,7 +79,7 @@ export default function ChatPanel() {
           disabled={sending}
         />
         <button
-          className="px-4 py-2 bg-[#FAC42B] text-neutral-900 rounded font-semibold disabled:opacity-50 font-roboto"
+          className="px-4 py-2 bg-pam-accent1 text-pam-text rounded font-semibold disabled:opacity-50 font-roboto border border-pam-accent1 hover:border-pam-accent2"
           onClick={handleSend}
           disabled={!input.trim() || sending}
         >

@@ -27,25 +27,25 @@ export function PlanCanvas() {
 
   if (loading) {
     return (
-      <div className="p-6 bg-neutral-900">
+      <div className="p-6 bg-pam-canvas">
         <div className="animate-pulse">
-          <div className="h-4 bg-neutral-700 rounded w-3/4 mb-4"></div>
-          <div className="h-4 bg-neutral-700 rounded w-1/2 mb-4"></div>
-          <div className="h-4 bg-neutral-700 rounded w-5/6"></div>
+          <div className="h-4 bg-pam-surface rounded w-3/4 mb-4"></div>
+          <div className="h-4 bg-pam-surface rounded w-1/2 mb-4"></div>
+          <div className="h-4 bg-pam-surface rounded w-5/6"></div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="p-6 prose prose-sm max-w-none overflow-hidden prose-invert bg-neutral-900">
+    <div className="p-6 prose prose-sm max-w-none overflow-hidden prose-invert bg-pam-canvas">
       <ReactMarkdown 
         components={{
-          h1: ({ children }) => <h1 className="text-2xl font-bold mb-4 break-words text-neutral-100">{children}</h1>,
-          h2: ({ children }) => <h2 className="text-xl font-semibold mb-3 mt-6 break-words text-neutral-100">{children}</h2>,
-          h3: ({ children }) => <h3 className="text-lg font-medium mb-2 mt-4 break-words text-neutral-200">{children}</h3>,
-          p: ({ children }) => <p className="mb-3 break-words text-neutral-300">{children}</p>,
-          strong: ({ children }) => <strong className="font-semibold break-words text-neutral-100">{children}</strong>,
+          h1: ({ children }) => <h1 className="text-2xl font-bold mb-4 break-words text-pam-text">{children}</h1>,
+          h2: ({ children }) => <h2 className="text-xl font-semibold mb-3 mt-6 break-words text-pam-text">{children}</h2>,
+          h3: ({ children }) => <h3 className="text-lg font-medium mb-2 mt-4 break-words text-pam-subtle">{children}</h3>,
+          p: ({ children }) => <p className="mb-3 break-words text-pam-subtle">{children}</p>,
+          strong: ({ children }) => <strong className="font-semibold break-words text-pam-text">{children}</strong>,
         }}
       >
         {markdown}

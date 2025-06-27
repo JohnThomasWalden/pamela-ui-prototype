@@ -7,17 +7,17 @@ export function PlanQueue() {
   const { plans, activePlanId, setActivePlanId } = usePlan();
 
   return (
-    <div className="p-4 bg-neutral-900">
-      <h2 className="text-lg font-semibold mb-3 text-neutral-100">Plans</h2>
+    <div className="p-4 bg-pam-canvas">
+      <h2 className="text-lg font-semibold mb-3 text-pam-text">Plans</h2>
       <div className="space-y-2">
         {plans.map((plan) => (
           <button
             key={plan.id}
             onClick={() => setActivePlanId(plan.id)}
-            className={`w-full text-left p-3 rounded-lg border transition-colors ${
+            className={`w-full text-left p-3 rounded-xl border transition-colors shadow-surface ${
               activePlanId === plan.id
-                ? 'bg-blue-900/50 border-blue-600 text-blue-100'
-                : 'bg-neutral-800 border-neutral-600 hover:bg-neutral-700 text-neutral-200'
+                ? 'bg-pam-accent1/25 border-pam-accent1 text-pam-accent1'
+                : 'bg-pam-surface border-pam-surface hover:bg-pam-surface/80 text-pam-text'
             }`}
           >
             <div className="font-medium">{plan.title}</div>

@@ -56,8 +56,8 @@ export default function PlanPreview() {
   };
 
   return (
-    <div className="space-y-4 p-6 bg-neutral-900 font-roboto text-neutral-100">
-      <h2 className="text-xl font-semibold mb-4 text-white">Task List</h2>
+    <div className="space-y-4 p-6 bg-pam-canvas font-roboto text-pam-text">
+      <h2 className="text-xl font-semibold mb-4 text-pam-text">Task List</h2>
       <div className="space-y-2">
         {data.tasks.map((task) => (
           <div key={task.id} className="flex items-center gap-2">
@@ -66,12 +66,12 @@ export default function PlanPreview() {
               id={task.id}
               onCheckedChange={(checked) => handleCheckbox(task.id, !!checked)}
             />
-            <label htmlFor={task.id} className="text-sm text-neutral-100 font-roboto">{task.label}</label>
+            <label htmlFor={task.id} className="text-sm text-pam-text font-roboto">{task.label}</label>
           </div>
         ))}
       </div>
       <button
-        className="px-4 py-2 bg-[#FAC42B] text-neutral-900 rounded font-semibold disabled:opacity-50 font-roboto border border-neutral-700"
+        className="px-4 py-2 bg-pam-accent1 text-pam-text rounded font-semibold disabled:opacity-50 font-roboto border border-pam-accent1 hover:border-pam-accent2"
         onClick={handleRun}
         disabled={selected.length === 0 || loading}
       >

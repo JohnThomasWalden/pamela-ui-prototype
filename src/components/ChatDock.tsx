@@ -32,10 +32,10 @@ export function ChatDock() {
 
   if (isCollapsed) {
     return (
-      <div className="p-2 border-t border-neutral-700 bg-neutral-900">
+      <div className="p-2 border-t border-pam-subtle/20 bg-pam-canvas">
         <button
           onClick={() => setIsCollapsed(false)}
-          className="w-full p-2 text-sm text-neutral-400 hover:bg-neutral-800 rounded"
+          className="w-full p-2 text-sm text-pam-subtle hover:bg-pam-surface rounded"
         >
           💬 Chat (click to expand)
         </button>
@@ -44,18 +44,18 @@ export function ChatDock() {
   }
 
   return (
-    <div className="border-t border-neutral-700 bg-neutral-900">
-      <div className="p-3 border-b border-neutral-700 bg-neutral-800 flex justify-between items-center">
-        <h3 className="font-medium text-neutral-100">Chat</h3>
+    <div className="border-t border-pam-subtle/20 bg-pam-canvas">
+      <div className="p-3 border-b border-pam-subtle/20 bg-pam-surface flex justify-between items-center">
+        <h3 className="font-medium text-pam-text">Chat</h3>
         <button
           onClick={() => setIsCollapsed(true)}
-          className="text-neutral-400 hover:text-neutral-200"
+          className="text-pam-subtle hover:text-pam-text"
         >
           ✕
         </button>
       </div>
       
-      <div className="h-32 overflow-y-auto p-3 space-y-2 bg-neutral-900">
+      <div className="h-32 overflow-y-auto p-3 space-y-2 bg-pam-canvas">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -66,8 +66,8 @@ export function ChatDock() {
             <div
               className={`inline-block p-2 rounded-lg max-w-xs ${
                 message.isUser
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-neutral-700 text-neutral-200'
+                  ? 'bg-pam-accent1 text-pam-text'
+                  : 'bg-pam-surface text-pam-text'
               }`}
             >
               {message.text}
@@ -76,7 +76,7 @@ export function ChatDock() {
         ))}
       </div>
       
-      <div className="p-3 border-t border-neutral-700 bg-neutral-900">
+      <div className="p-3 border-t border-pam-subtle/20 bg-pam-canvas">
         <div className="flex gap-2">
           <input
             type="text"
@@ -84,11 +84,11 @@ export function ChatDock() {
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Type a message..."
-            className="flex-1 px-3 py-2 border border-neutral-600 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-neutral-800 text-neutral-100 placeholder-neutral-400"
+            className="flex-1 px-3 py-2 border border-pam-subtle/30 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pam-accent1 bg-pam-surface text-pam-text placeholder-pam-subtle/60"
           />
           <button
             onClick={handleSend}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
+            className="px-4 py-2 bg-pam-accent1 text-pam-text rounded-lg text-sm hover:bg-pam-accent1/80 border border-pam-accent1 hover:border-pam-accent2"
           >
             Send
           </button>

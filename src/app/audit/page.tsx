@@ -8,10 +8,10 @@ const demoRuns = [
 function StatusChip({ status }: { status: string }) {
   const color =
     status === "success"
-      ? "bg-[#FAC42B] text-neutral-900"
+      ? "bg-pam-accent2/20 text-pam-accent2"
       : status === "fail"
-      ? "bg-red-500 text-white"
-      : "bg-[#FAC42B] text-neutral-900 opacity-70";
+      ? "bg-red-500/20 text-red-400"
+      : "bg-pam-accent1/20 text-pam-accent1";
   const label =
     status === "success"
       ? "Success"
@@ -25,14 +25,14 @@ function StatusChip({ status }: { status: string }) {
 
 export default function AuditPage() {
   return (
-    <div className="p-8 bg-neutral-900 min-h-screen font-roboto text-neutral-100">
-      <h1 className="text-2xl font-bold mb-6 text-white">Audit Feed</h1>
+    <div className="p-8 bg-pam-canvas min-h-screen font-roboto text-pam-text">
+      <h1 className="text-2xl font-bold mb-6 text-pam-text">Audit Feed</h1>
       <div className="space-y-4">
         {demoRuns.map((run) => (
-          <div key={run.id} className="flex items-center gap-4 p-4 bg-neutral-800 rounded shadow-sm border border-neutral-700">
+          <div key={run.id} className="flex items-center gap-4 p-4 bg-pam-surface rounded-xl shadow-surface border border-pam-subtle/30">
             <div className="flex-1">
-              <div className="font-medium text-neutral-100 font-roboto">{run.label}</div>
-              <div className="text-xs text-neutral-400 font-roboto">ID: {run.id}</div>
+              <div className="font-medium text-pam-text font-roboto">{run.label}</div>
+              <div className="text-xs text-pam-subtle font-roboto">ID: {run.id}</div>
             </div>
             <StatusChip status={run.status} />
           </div>

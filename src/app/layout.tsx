@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${geistSans.variable} ${geistMono.variable} bg-neutral-900 text-neutral-100 antialiased`}>
+      <body className={`${roboto.variable} ${geistSans.variable} ${geistMono.variable} bg-pam-canvas text-pam-text antialiased`}>
         <ReactQueryProvider>
           <PlanProvider>
             <TaskProvider>
