@@ -1,0 +1,219 @@
+[
+    {
+      "id": 1,
+      "section": "1. Validate Demand & Set a Goal",
+      "title": "Configure survey mapping app",
+      "description": "Select a mobile mapping tool (e.g., Fulcrum, ArcGIS QuickCapture) and deploy a template so the owner can log lawn-care usage while walking neighborhoods.",
+      "outcome": "Shareable survey link + mobile app ready for data capture.",
+      "cost": "2 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 2,
+      "section": "1. Validate Demand & Set a Goal",
+      "title": "Define client-density goal",
+      "description": "Generate a service-area map and set a target of 20–30 weekly clients within chosen ZIP codes.",
+      "outcome": "PDF map and written goal statement.",
+      "cost": "1 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 3,
+      "section": "2. Choose a Legal Structure & Register",
+      "title": "File LLC online",
+      "description": "Complete Colorado Secretary of State web filing for Articles of Organization on behalf of the owner.",
+      "outcome": "LLC approved confirmation PDF.",
+      "cost": "$50",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 4,
+      "section": "2. Choose a Legal Structure & Register",
+      "title": "Register trade name",
+      "description": "Submit trade-name filing and add annual report due-dates to an automated calendar.",
+      "outcome": "Trade-name certificate + calendar reminders.",
+      "cost": "$20",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 5,
+      "section": "3. Secure Local Licenses & Handle Taxes",
+      "title": "Prepare sales-tax license application",
+      "description": "Auto-fill Grand Junction sales-tax license form and package instructions for e-signature.",
+      "outcome": "Completed application ready for submission.",
+      "cost": "1 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 6,
+      "section": "3. Secure Local Licenses & Handle Taxes",
+      "title": "Draft pesticide applicator application",
+      "description": "Collect requirements and pre-populate Colorado Commercial Pesticide Applicator forms.",
+      "outcome": "Editable application file with checklist.",
+      "cost": "1 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 7,
+      "section": "4. Insurance & Bookkeeping",
+      "title": "Collect liability-insurance quotes",
+      "description": "Submit business details to online brokers and compare three general-liability policies.",
+      "outcome": "Quote comparison table and recommendation.",
+      "cost": "2 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 8,
+      "section": "4. Insurance & Bookkeeping",
+      "title": "Pre-configure commercial auto quotes",
+      "description": "Store vehicle details and fetch provisional commercial auto quotes for future purchase.",
+      "outcome": "Saved quote links in dashboard.",
+      "cost": "1 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 9,
+      "section": "4. Insurance & Bookkeeping",
+      "title": "Recommend business checking options",
+      "description": "Compare three banks or fintechs, highlighting mower-friendly hours and low fees, and start online application for the chosen option.",
+      "outcome": "Application link + comparison summary.",
+      "cost": "1 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 10,
+      "section": "4. Insurance & Bookkeeping",
+      "title": "Set up bookkeeping software",
+      "description": "Create account in cloud bookkeeping app, customize chart of accounts, and enable mileage & depreciation tracking.",
+      "outcome": "Bookkeeping dashboard ready for entries.",
+      "cost": "$20 / mo",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 11,
+      "section": "5. Acquire Reliable Equipment",
+      "title": "Source zero-turn mower options",
+      "description": "Scrape dealer listings, compare prices & hours, and draft a purchase order for the best value unit.",
+      "outcome": "Purchase-order PDF + shortlist of 3 mowers.",
+      "cost": "2 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 12,
+      "section": "5. Acquire Reliable Equipment",
+      "title": "Source push-mower options",
+      "description": "Find reliable 21″ commercial push mowers and draft purchase order.",
+      "outcome": "Purchase-order PDF + supplier links.",
+      "cost": "1 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 13,
+      "section": "5. Acquire Reliable Equipment",
+      "title": "Source trimmer & blower options",
+      "description": "Compare battery-powered trimmer and blower bundles; prepare purchase order.",
+      "outcome": "Purchase-order PDF + product comparison.",
+      "cost": "1 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 14,
+      "section": "5. Acquire Reliable Equipment",
+      "title": "Source trailer options",
+      "description": "Identify 6′ × 12′ trailers with ramp gates and create purchase order.",
+      "outcome": "Purchase-order PDF + dealer contact details.",
+      "cost": "1 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 15,
+      "section": "6. Price for Margin, Not Just Revenue",
+      "title": "Generate regional price list",
+      "description": "Analyze market data and output recommended mowing rates by lawn size.",
+      "outcome": "Excel/CSV price list.",
+      "cost": "2 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 16,
+      "section": "6. Price for Margin, Not Just Revenue",
+      "title": "Design season-package pricing",
+      "description": "Structure 26-week subscription plans and produce customer-facing PDF.",
+      "outcome": "Season-package brochure PDF.",
+      "cost": "2 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 17,
+      "section": "6. Price for Margin, Not Just Revenue",
+      "title": "Define upsell menu",
+      "description": "List edging, aeration, fertilization, clean-ups, and snow removal with margin targets.",
+      "outcome": "Upsell price sheet.",
+      "cost": "1 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 18,
+      "section": "7. Marketing Playbook",
+      "title": "Create Google Business Profile draft",
+      "description": "Populate profile fields, upload placeholder photos, and enable quote form (awaiting owner verification).",
+      "outcome": "Draft listing ready for verification.",
+      "cost": "1 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 19,
+      "section": "7. Marketing Playbook",
+      "title": "Design QR-coded door-hangers",
+      "description": "Produce print-ready artwork and place an online print order for 500 units.",
+      "outcome": "Print order confirmation + artwork file.",
+      "cost": "$150",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 20,
+      "section": "7. Marketing Playbook",
+      "title": "Build HOA & realtor outreach list",
+      "description": "Scrape local HOA contacts and real-estate agents; draft personalized email templates offering move-in specials.",
+      "outcome": "CSV contact list + mail-merge templates.",
+      "cost": "3 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 21,
+      "section": "7. Marketing Playbook",
+      "title": "Publish referral program",
+      "description": "Draft policy for free-first-trim referrals and integrate sign-up form into CRM.",
+      "outcome": "Live referral landing page.",
+      "cost": "1 h",
+      "confidence": "HIGH"
+    },
+    {
+      "id": 22,
+      "section": "9. Boost Long-Term Profitability",
+      "title": "Implement routing software",
+      "description": "Set up LawnPro or Jobber, import client addresses, and generate optimized daily routes.",
+      "outcome": "Automated routing active; expected drive-time reduction 15 %.",
+      "cost": "$30 / mo",
+      "confidence": "MED"
+    },
+    {
+      "id": 23,
+      "section": "9. Boost Long-Term Profitability",
+      "title": "Create equipment lifecycle plan",
+      "description": "Schedule resale or trade-in at 600–800 engine hours and set reminders.",
+      "outcome": "Lifecycle spreadsheet with alert dates.",
+      "cost": "0.5 h",
+      "confidence": "MED"
+    },
+    {
+      "id": 24,
+      "section": "9. Boost Long-Term Profitability",
+      "title": "Develop off-season service catalog",
+      "description": "Research snow-plowing, holiday-light installs, and minor landscaping services; create pricing sheet.",
+      "outcome": "Off-season services brochure.",
+      "cost": "2 h",
+      "confidence": "MED"
+    }
+  ]
+  

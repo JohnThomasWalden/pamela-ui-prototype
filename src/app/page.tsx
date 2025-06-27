@@ -1,14 +1,14 @@
-import ChatPanel from "@/components/ChatPanel";
-import PlanPreview from "@/components/PlanPreview";
+import { LeftPane } from "@/components/LeftPane";
+import { RightPane } from "@/components/RightPane";
 
 export default function HomePage() {
   return (
-    <div className="flex h-full min-h-[80vh]">
-      <div className="w-1/2 border-r">
-        <ChatPanel />
+    <div className="flex h-screen bg-neutral-900">
+      <div className="w-1/2 border-r border-neutral-700">
+        <LeftPane />
       </div>
       <div className="w-1/2">
-        <PlanPreview />
+        <RightPane />
       </div>
     </div>
   );
